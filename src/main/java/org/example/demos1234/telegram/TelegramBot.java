@@ -478,7 +478,7 @@ public class TelegramBot extends TelegramLongPollingBot implements TelegramModel
             if (responseCode == 200) {
                 System.out.println("Повідомлення надіслано успішно!");
             } else {
-                System.out.println("Помилка надсилання! Код: " + responseCode);
+                System.out.println("Помилка надсилання!: " + responseCode);
             }
 
         } catch (IOException e) {

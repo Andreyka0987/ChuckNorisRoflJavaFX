@@ -1,6 +1,5 @@
-package org.example.demos1234;
+package org.example.demos1234.garbage;
 
-import javafx.scene.control.TextField;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -43,10 +42,6 @@ public class Model implements IModel{
             if (a % 2 == 0){
                 jsonTemp = json1.getString("value");
             }
-            else {
-                return jsonTemp = "";
-            }
-
             return jsonTemp;
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,8 +54,9 @@ public class Model implements IModel{
         Random random = new Random();
         int b = random.nextInt(4)+1;
         int a = getRandom();
-        String rezult = "";
-
+        String rezult;
+        System.out.println(b);
+        System.out.println(a);
         if (a % 2 !=0){
             rezult = map.get(b);
         }
@@ -69,6 +65,11 @@ public class Model implements IModel{
         }
         return rezult;
     }
+
+    @Override
+    public void sentMessage(String text) {
+    }
+
 
     int a;
     public int getRandom(){
